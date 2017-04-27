@@ -10,7 +10,6 @@
   function ToBuyController(ShoppingListCheckOffService) {
     var tbc = this;
     tbc.items = ShoppingListCheckOffService.getToBuy();
-    tbc.empty = false;
     tbc.bought= function (index) {
       ShoppingListCheckOffService.transfer(index);
     };
@@ -20,7 +19,6 @@
   function AlreadyBoughtController(ShoppingListCheckOffService) {
     var abc = this;
     abc.items = ShoppingListCheckOffService.getBought();
-    abc.empty = true;
   };
 
   function ShoppingListCheckOffService() {
@@ -30,6 +28,7 @@
     service.transfer = function(index) {
       bought.push(toBuy[index]);
       toBuy.splice(index,1);
+      boughtEmpty = false;
     };
     service.getToBuy = function() {
       return toBuy;

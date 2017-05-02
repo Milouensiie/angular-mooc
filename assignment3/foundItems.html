@@ -1,0 +1,8 @@
+<div class="row">
+  <ul class="col-xs-12">
+    <li ng-repeat="item in down.found">
+      ({{item.short_name}}) {{item.name}}, {{item.description}}.
+      <button ng-click="down.removeItem($index);">Remove Item</button>
+    </li>
+  </ul>
+</div>

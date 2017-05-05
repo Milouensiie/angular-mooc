@@ -1,0 +1,14 @@
+<div class="container">
+  <div ng-if="!infCtrl.reg">
+    Not Signed Up Yet.  <a ui-sref="public.signup">Sign up Now!</a>
+  </div>
+  <div ng-if="infCtrl.reg">
+    First name : {{infCtrl.user.firstname}} </br>
+    Last name : {{infCtrl.user.lastname}}</br>
+    Email : {{infCtrl.user.email}}</br>
+    Phone : {{infCtrl.user.phone}}</br>
+    Your favourite: </br>
+    <menu-item menu-item="infCtrl.fav"></menu-item>
+  </div>
+
+</div>

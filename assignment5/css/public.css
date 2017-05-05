@@ -111,6 +111,15 @@ h3.menu-item-title {
   font-size: .9em;
   font-style: italic;
 }
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
 /* END SINGLE CATEGORY PAGE */
 
 

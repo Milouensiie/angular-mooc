@@ -1,8 +1,5 @@
-<a ui-sref="home">Home</a> &lt; <span>Categories</span>
-
-<h3>Our Menu</h3>
 <ul>
-  <li ng-repeat="item in catCtrl.items">
-    <a ui-sref="items({categoryShortName:catCtrl.getShortName($index)})">{{ item.name }}</a>
+  <li ng-repeat="item in $ctrl.catList">
+    <a ui-sref="items({categoryShortName:item.short_name})">{{ item.name }}</a>
   </li>
 </ul>

@@ -22,7 +22,7 @@
     // Categories page
     .state('categories', {
       url: '/categories',
-      templateUrl: 'src/menuapp/templates/categories.template.html',
+      templateUrl: 'src/menuapp/templates/categoriesMain.template.html',
       controller: 'CategoriesController as catCtrl',
       resolve: {
         categories: ['MenuDataService',
@@ -35,8 +35,8 @@
     // Items pages
     .state('items', {
       url: "/items/{categoryShortName}",
-      templateUrl: 'src/menuapp/templates/items.template.html',
-      controller: 'ItemsController as ctrl',
+      templateUrl: 'src/menuapp/templates/itemsMain.template.html',
+      controller: 'ItemsController as itCtrl',
       resolve: {
         items: ['MenuDataService', '$stateParams', function (MenuDataService, $stateParams) {
           return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
